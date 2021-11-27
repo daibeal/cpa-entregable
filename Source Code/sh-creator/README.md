@@ -1,3 +1,7 @@
+<kbd>
+<img src ="https://opensource.com/sites/default/files/styles/image-full-size/public/lead-images/bash_command_line.png?itok=k4z94W2U" style="border-radius:100%">
+</kbd>
+
 # sh-creator.c
 
 These functions are a part of the CPA Deliverable suite;
