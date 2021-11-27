@@ -33,11 +33,11 @@ library(ggpubr) # Combining plots
 ## Section: Data Import
 ##################################################
 
-df0 <- read.csv("/Users/daibeal/Downloads/Entrega/nuestraEntrega/Source Code/r-source/example-time-log0.csv",
+df0 <- read.csv("/Users/daibeal/Downloads/Entrega/nuestraEntrega/time-logs/example-time-log0.csv",
                header = TRUE)
-df1 <- read.csv("/Users/daibeal/Downloads/Entrega/nuestraEntrega/Source Code/r-source/example-time-log1.csv",
+df1 <- read.csv("/Users/daibeal/Downloads/Entrega/nuestraEntrega/time-logs/example-time-log1.csv",
                 header = TRUE)
-df2 <- read.csv("/Users/daibeal/Downloads/Entrega/nuestraEntrega/Source Code/r-source/example-time-log2.csv",
+df2 <- read.csv("/Users/daibeal/Downloads/Entrega/nuestraEntrega/time-logs/example-time-log2.csv",
                 header = TRUE)
 
 
@@ -83,9 +83,9 @@ graph_restore2 <- ggplot(df2, aes(x=N_Threads,y=Time)) +
 
 
 #Show graph
-figure <- ggarrange(graph_restore0, graph_restore1, graph_restore2,
-                    labels = c("A", "B", "C"),
-                    ncol = 2, nrow = 2) 
+figure <- ggarrange(graph_restore1, graph_restore2,
+                    labels = c("A", "B"),
+                    ncol = 2) 
 figure
 
 # Exercise 4
