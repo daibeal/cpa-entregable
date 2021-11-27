@@ -1,3 +1,7 @@
+<kbd>
+<img src ="https://opensource.com/sites/default/files/styles/image-full-size/public/lead-images/bash_command_line.png?itok=k4z94W2U" style="border-radius:100%">
+</kbd>
+
 # sh-creator.c
 
 These functions are a part of the CPA Deliverable suite;
@@ -23,12 +27,12 @@ In the project directory.
 As before, run 
 
 ```
-./project
+./sh-creator
 ```
 
 to run the program.
 
-Enter the name fo the executable: `exectuable_name`
+Enter the name fo the executable: `executable_name`
 
 
 Do you want to launch to KAHAN? (Y/N): `Y OR y -> Launch to Kahan, else -> Exit`
