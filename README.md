@@ -2,7 +2,6 @@
 
 
 <!-- PROJECT SHIELDS -->
-[![GNU_License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -10,7 +9,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/daibeal/cpa-entregable/tree-save/master/README.md">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Circle-icons-computer.svg/1200px-Circle-icons-computer.svg.png" alt="Logo" width="80" height="80">
   </a>
 
