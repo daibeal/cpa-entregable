@@ -81,7 +81,7 @@ Distributed under the GNU License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Dairon Andrés Benites Aldaz - [@your_twitter](https://twitter.com/your_username) - daibeal@upv.edu.es
+Dairon Andrés Benites Aldaz - [@daibeal26](https://twitter.com/daibeal26) - daibeal@upv.edu.es
 
 Project Link: [https://github.com/daibeal/cpa-entregable](https://github.com/daibeal/cpa-entregable)
 
