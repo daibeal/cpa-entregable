@@ -1,7 +1,0 @@
-Para secuencial el tiempo de ejecucion es 15.305868
-Par 1 hilos el tiempo de ejecucion es 13.840646
-Par 2 hilos el tiempo de ejecucion es 7.051230
-Par 4 hilos el tiempo de ejecucion es 3.516938
-Par 8 hilos el tiempo de ejecucion es 2.047917
-Par 16 hilos el tiempo de ejecucion es 1.196425
-Par 32 hilos el tiempo de ejecucion es 0.734447
