@@ -39,15 +39,13 @@ df1 <- read.csv("/Users/daibeal/Downloads/Entrega/nuestraEntrega/Source Code/r-s
                 header = TRUE)
 df2 <- read.csv("/Users/daibeal/Downloads/Entrega/nuestraEntrega/Source Code/r-source/example-time-log2.csv",
                 header = TRUE)
-df3 <- read.csv("/Users/daibeal/Downloads/Entrega/nuestraEntrega/Source Code/r-source/example-time-log3.csv",
-                header = TRUE)
+
 
 ## Section: Data frame loading
 ##################################################
 df0 <- within(df0, rm("X"))
 df1 <- within(df1, rm("X"))
 df2 <- within(df2, rm("X"))
-df3 <- within(df3, rm("X"))
 
 # View(df0)
 
@@ -55,47 +53,84 @@ df3 <- within(df3, rm("X"))
 summary_0 <- summary(df0)
 summary_1 <-summary(df1) 
 summary_2 <- summary(df2) 
-summary_3 <- summary(df3) 
 # Build graph- Restore0
 
 # Time vs Number of Threads
 
 
 
+
 graph_restore0 <- ggplot(df0, aes(x=N_Threads,y=Time)) +
   geom_line() + geom_point(color='purple') +
-  ggtitle("restore0.c") + xlab("Number of Threads") + 
+  ggtitle("restore0.c") + xlab("Number of Threads") +
   theme_economist_white(base_family="ITC Officina Sans") +
-  scale_colour_economist() + scale_y_continuous(position = "left") +  
-  scale_y_continuous(breaks = round(seq(min(df1$Time), max(df1$Time), by = 1),1))
+  scale_colour_economist()  +
+  scale_y_continuous(breaks = round(seq(45, 60, by = 1),1), position = "left")
+  
 
 graph_restore1 <- ggplot(df1, aes(x=N_Threads,y=Time)) +
   geom_line() + geom_point(color='#8b0000') +
   ggtitle("restore1.c") + xlab("Number of Threads") + 
   theme_economist_white(base_family="ITC Officina Sans") +
-  scale_colour_economist() + scale_y_continuous(position = "left") +  
-  scale_y_continuous(breaks = round(seq(min(df1$Time), max(df1$Time), by = 1),1))
+  scale_colour_economist() + scale_y_continuous(position = "left") 
 
 graph_restore2 <- ggplot(df2, aes(x=N_Threads,y=Time)) +
   geom_line() + geom_point(color='#00008b') +
   ggtitle("restore2.c") + xlab("Number of Threads") + 
   theme_economist_white(base_family="ITC Officina Sans") +
-  scale_colour_economist() + scale_y_continuous(position = "left") +  
-  scale_y_continuous(breaks = round(seq(min(df2$Time), max(df2$Time), by = 1),1))
+  scale_colour_economist() + scale_y_continuous(position = "left") 
 
-graph_restore3 <- ggplot(df3, aes(x=N_Threads,y=Time)) +
-  geom_line() + geom_point(color='#006400') +
-  ggtitle("restore3.c") + xlab("Number of Threads") + 
-  theme_economist_white(base_family="ITC Officina Sans") +
-  scale_colour_economist() + scale_y_continuous(position = "left") +  
-  scale_y_continuous(breaks = round(seq(min(df3$Time), max(df3$Time), by = 1),1))+ labs(caption = "Dairon Benites - Polytechnic University of Valencia")
 
 
 #Show graph
-figure <- ggarrange(graph_restore0, graph_restore1, graph_restore2,graph_restore3,
-                    labels = c("A", "B", "C", "D"),
+figure <- ggarrange(graph_restore0, graph_restore1, graph_restore2,
+                    labels = c("A", "B", "C"),
                     ncol = 2, nrow = 2) 
 figure
 
-# Speedup vs Number of Threads
+# Exercise 4
+# 16 threads
+
+#Restore 1
+# static con tamaño de chunk por defecto
+static_restore1 = 17.974302
+static_1_restore1 = 28.464924
+dynamic_restore1 = 199.364536
+tiempos <- c(static_restore1,static_1_restore1, dynamic_restore1)
+versiones <- c("Static chunk defecto", "Static chunk 1", "Dynamic")
+sf_1 <- data.frame(tiempos, versiones)
+summary(sf_1)
+
+graph_restore1_4 <- ggplot(sf_1, aes(versiones, tiempos)) +
+  geom_point(color = 'blue', size = 3)+
+  ggtitle("restore1.c") +
+  theme_economist_white(base_family="ITC Officina Sans") +
+  scale_colour_economist() + xlab("Thread Planification") +
+  ylab("Tiempo") 
+graph_restore1_4
+
+#Restore 2
+
+static_restore2 = 5.7226924
+static_1_restore2 = 8.768748
+dynamic_restore2 = 8.4352
+tiempos2 <- c(static_restore2,static_1_restore2, dynamic_restore2)
+sf_2 <- data.frame(tiempos2, versiones)
+summary(sf_2)
+
+graph_restore2_4 <- ggplot(sf_2, aes(versiones, tiempos2)) +
+  geom_point(color = 'red', size = 3) + 
+  ggtitle("restore2.c") +
+  theme_economist_white(base_family="ITC Officina Sans") +
+  scale_colour_economist() + xlab("Thread Planification") +
+  ylab("Tiempo") + labs(caption = "@daibeal - Polytechnic University of Valencia")
+graph_restore2_4
+
+#Show graph
+figure2 <- ggarrange(graph_restore1_4, graph_restore2_4,
+                    labels = c("A", "B"),
+                    ncol = 2) 
+figure2
+
+
 
