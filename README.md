@@ -230,4 +230,4 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/elena-vila-2932321b2/
-[product-screenshot]: https://github.com/daibeal/cpa-entregable/blob/master/Source%20Code/sh-creator/demo.png?raw=true
+[product-screenshot]:https://6lli539m39y3hpkelqsm3c2fg-wpengine.netdna-ssl.com/wp-content/uploads/2021/06/2021_059_Supercomputer-des-KIT-einer-der-15-schnellsten-in-Europa_72dpi.jpeg
