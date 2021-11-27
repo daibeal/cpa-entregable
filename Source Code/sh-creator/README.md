@@ -23,12 +23,12 @@ In the project directory.
 As before, run 
 
 ```
-./project
+./sh-creator
 ```
 
 to run the program.
 
-Enter the name fo the executable: `exectuable_name`
+Enter the name fo the executable: `executable_name`
 
 
 Do you want to launch to KAHAN? (Y/N): `Y OR y -> Launch to Kahan, else -> Exit`
