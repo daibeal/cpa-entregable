@@ -1,7 +1,7 @@
 #################################################################
 ## Project: Entregable CPA - SpeedUp and Visualization         ##
 ## Script purpose: Visualization and analysis                  ##
-## Date: Fri Nov 26 23:27:40 CET 2021                          ##
+## Date: Sat Nov 27 18:11:57 CET 2021                          ##
 ## Author: Dairon Andrés Benites Aldaz - (daibeal@upv.edu.es)  ##
 #################################################################
 
