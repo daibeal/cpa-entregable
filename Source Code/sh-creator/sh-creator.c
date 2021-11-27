@@ -80,13 +80,16 @@ void getStringFromUser(char *msg, char *str, int size)
 int main(int argc, char *argv[])
 {
     printHeader();
-
+    printf("Enter origin directory: ");
+    char origin[100];
+    scanf("%s", origin);
     // Copy files from Local Drive
     printf("\nCopying files from Local Drive...\n");
 
     //Origin directory
-    char *str = concatenate("cp  -r", " /Users/daibeal/Downloads/Entrega", " .");
-    system(str);
+    char *str = concatenate("cp  -r ", origin, " .");
+    printf("%s\n", str);
+    //system(str);
     free(str);
 
     printf("Files copied successfully!\n");
